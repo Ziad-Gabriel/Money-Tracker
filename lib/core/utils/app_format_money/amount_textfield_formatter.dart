@@ -2,12 +2,13 @@ import 'package:intl/intl.dart';
 import 'package:flutter/services.dart';
 
 class AmountTextFieldFormatter extends TextInputFormatter {
-
-  final int maxDecimalDigits=2;
+  final int maxDecimalDigits = 2;
 
   @override
   TextEditingValue formatEditUpdate(
-      TextEditingValue oldValue, TextEditingValue newValue) {
+    TextEditingValue oldValue,
+    TextEditingValue newValue,
+  ) {
     String newText = newValue.text.replaceAll(',', '');
     if (newText.isEmpty) {
       return newValue;
@@ -28,8 +29,7 @@ class AmountTextFieldFormatter extends TextInputFormatter {
     if (integerPart.isEmpty) integerPart = '0';
 
     final formatter = NumberFormat("#,###");
-    String formattedInteger =
-        formatter.format(int.parse(integerPart));
+    String formattedInteger = formatter.format(int.parse(integerPart));
 
     // handle decimal part
     String decimalPart = '';
@@ -43,14 +43,14 @@ class AmountTextFieldFormatter extends TextInputFormatter {
       return TextEditingValue(
         text: '$formattedInteger.$decimalPart',
         selection: TextSelection.collapsed(
-            offset: '$formattedInteger.$decimalPart'.length),
+          offset: '$formattedInteger.$decimalPart'.length,
+        ),
       );
     }
 
     return TextEditingValue(
       text: formattedInteger,
-      selection:
-          TextSelection.collapsed(offset: formattedInteger.length),
+      selection: TextSelection.collapsed(offset: formattedInteger.length),
     );
   }
 }

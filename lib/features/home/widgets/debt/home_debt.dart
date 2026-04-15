@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:z_money/core/constants/app_sized.dart';
-import 'package:z_money/features/debts/view/debt_view.dart';
+import 'package:money_tracker/core/constants/app_sized.dart';
+import 'package:money_tracker/features/debts/view/debt_view.dart';
 
 class HomeDebt extends StatelessWidget {
   const HomeDebt({super.key});

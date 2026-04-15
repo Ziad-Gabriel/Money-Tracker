@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:z_money/core/constants/app_text_styles/buttons_text_style.dart';
-import 'package:z_money/core/validation/amount_validator.dart';
-import 'package:z_money/core/validation/description_validator.dart';
-import 'package:z_money/features/home/widgets/buttons/done_button/functions/Invalid/amount_descripe_invalid.dart';
-import 'package:z_money/features/home/widgets/buttons/done_button/functions/Invalid/amount_invalid.dart';
-import 'package:z_money/features/home/widgets/buttons/done_button/functions/Invalid/descripe_invalid.dart';
-import 'package:z_money/features/home/widgets/buttons/done_button/functions/valid/add.dart';
-import 'package:z_money/features/home/widgets/buttons/done_button/functions/valid/withdraw.dart';
-import 'package:z_money/features/transactions/data/transactions_data.dart';
-import 'package:z_money/features/transactions/data/transactions_label.dart';
+import 'package:money_tracker/core/validation/amount_validator.dart';
+import 'package:money_tracker/core/validation/description_validator.dart';
+import 'package:money_tracker/features/home/widgets/buttons/done_button/functions/invalid/amount_descripe_invalid.dart';
+import 'package:money_tracker/features/home/widgets/buttons/done_button/functions/invalid/amount_invalid.dart';
+import 'package:money_tracker/features/home/widgets/buttons/done_button/functions/invalid/descripe_invalid.dart';
+import 'package:money_tracker/features/home/widgets/buttons/done_button/functions/valid/add.dart';
+import 'package:money_tracker/features/home/widgets/buttons/done_button/functions/valid/withdraw.dart';
+import 'package:money_tracker/features/transactions/data/transactions_data.dart';
 
 class DoneButton extends ConsumerWidget {
   final bool isAdd;
   final TextEditingController amount;
   final TextEditingController description;
   final DateTime date;
-  final TransactionLabel? label;
 
   const DoneButton({
     super.key,
@@ -24,7 +21,6 @@ class DoneButton extends ConsumerWidget {
     required this.amount,
     required this.description,
     required this.date,
-    required this.label,
   });
 
   @override
@@ -49,7 +45,7 @@ class DoneButton extends ConsumerWidget {
                 newAmount: amountText,
                 description: descriptionText,
                 isAdd: isAdd,
-                label: label,
+
                 date: date,
                 ref: ref,
               ),
@@ -60,7 +56,7 @@ class DoneButton extends ConsumerWidget {
                 newAmount: amountText,
                 description: descriptionText,
                 isAdd: isAdd,
-                label: label,
+
                 date: date,
                 ref: ref,
               ),
@@ -73,7 +69,7 @@ class DoneButton extends ConsumerWidget {
         backgroundColor: Theme.of(context).colorScheme.primary,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
-      child: Text("Done", style: buttonsText(context)),
+      child: Text("Done"),
     );
   }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:z_money/core/constants/app_text_styles/main_text_style.dart';
 
 class TheEditProfileSetting extends StatelessWidget {
   final Function onTap;
@@ -26,10 +25,7 @@ class TheEditProfileSetting extends StatelessWidget {
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(theInformation, style: mainText(context)),
-                Text(userInformation, style: mainText(context)),
-              ],
+              children: [Text(theInformation), Text(userInformation)],
             ),
             IconButton(
               onPressed: () => onTap(),

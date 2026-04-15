@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:z_money/core/constants/app_text_styles/main_text_style.dart';
 
 Widget showEditProfileDialog(BuildContext context) {
   return AlertDialog(
@@ -16,7 +15,7 @@ Widget showEditProfileDialog(BuildContext context) {
           backgroundColor: Theme.of(context).colorScheme.primaryContainer,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
-        child: Text('Cancel', style: mainText(context)),
+        child: Text('Cancel'),
       ),
       ElevatedButton(
         onPressed: () {},
@@ -24,7 +23,7 @@ Widget showEditProfileDialog(BuildContext context) {
           backgroundColor: Theme.of(context).colorScheme.primary,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
-        child: Text('Done', style: mainText(context)),
+        child: Text('Done'),
       ),
     ],
   );

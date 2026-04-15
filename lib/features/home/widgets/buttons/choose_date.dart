@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:z_money/core/constants/app_text_styles/buttons_text_style.dart';
-import 'package:z_money/core/utils/date_formatter.dart';
-import 'package:z_money/core/utils/date_picker.dart';
+import 'package:money_tracker/core/utils/date_formatter.dart';
+import 'package:money_tracker/core/utils/date_picker.dart';
 
 class ChooseDate extends StatefulWidget {
   final DateTime? selectedDate;
@@ -35,7 +34,6 @@ class _ChooseDateState extends State<ChooseDate> {
         widget.selectedDate == null
             ? mainFormatter().format(DateTime.now())
             : mainFormatter().format(widget.selectedDate!),
-        style: dateChooserText(context),
       ),
       icon: Icon(
         Icons.calendar_month_outlined,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:z_money/core/constants/app_text_styles/main_text_style.dart';
 
 /// A custom bottom navigation bar for the Zmoney app.
 class MainNavigationBar extends StatelessWidget {
@@ -26,8 +25,8 @@ class MainNavigationBar extends StatelessWidget {
       ),
       child: BottomNavigationBar(
         backgroundColor: Theme.of(context).colorScheme.surface,
-        selectedLabelStyle: bottomNavText(),
-        unselectedLabelStyle: bottomNavText(),
+        // selectedLabelStyle: ,
+        // unselectedLabelStyle: ,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.account_box),

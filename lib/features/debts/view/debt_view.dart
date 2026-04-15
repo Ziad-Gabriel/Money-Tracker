@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:z_money/core/widgets/app_bar.dart';
+import 'package:money_tracker/core/widgets/app_bar.dart';
 
 class DebtView extends StatelessWidget {
   const DebtView({super.key});

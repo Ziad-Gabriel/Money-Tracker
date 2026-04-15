@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:z_money/core/constants/app_text_styles/main_text_style.dart';
 
 class SettingsButton extends StatelessWidget {
   final String buttonTitle;
@@ -23,7 +22,7 @@ class SettingsButton extends StatelessWidget {
         ),
         child: Padding(
           padding: EdgeInsets.all(16),
-          child: Center(child: Text(buttonTitle, style: mainText(context))),
+          child: Center(child: Text(buttonTitle)),
         ),
       ),
     );

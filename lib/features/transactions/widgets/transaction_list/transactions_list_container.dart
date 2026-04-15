@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:z_money/core/constants/app_text_styles/transaction_table_text_style.dart';
-import 'package:z_money/features/transactions/widgets/transaction_list/transactions_list_builder.dart';
+import 'package:money_tracker/features/transactions/widgets/transaction_list/transactions_list_builder.dart';
 
 class TransactionsListContainerView extends StatelessWidget {
   const TransactionsListContainerView({super.key});
@@ -14,30 +13,10 @@ class TransactionsListContainerView extends StatelessWidget {
         children: [
           Row(
             children: [
-              SizedBox(
-                width: 40,
-                child: Center(
-                  child: Text('label', style: transactionListText(context)),
-                ),
-              ),
-              Expanded(
-                child: Center(
-                  child: Text('date', style: transactionListText(context)),
-                ),
-              ),
-              Expanded(
-                child: Center(
-                  child: Text(
-                    'description',
-                    style: transactionListText(context),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Center(
-                  child: Text('amount', style: transactionListText(context)),
-                ),
-              ),
+              SizedBox(width: 40, child: Center(child: Text('label'))),
+              Expanded(child: Center(child: Text('date'))),
+              Expanded(child: Center(child: Text('description'))),
+              Expanded(child: Center(child: Text('amount'))),
               SizedBox(width: 40),
             ],
           ),

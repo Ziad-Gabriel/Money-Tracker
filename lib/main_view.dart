@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import 'package:z_money/core/widgets/app_bar.dart';
-import 'package:z_money/core/widgets/app_navigationbar.dart';
-import 'package:z_money/features/account/data/user_information_data.dart';
-import 'package:z_money/features/account/view/account_view.dart';
-import 'package:z_money/features/drawer/view/main_drawer.dart';
-import 'package:z_money/features/home/view/home_view.dart';
-import 'package:z_money/features/transactions/view/transactions_view.dart';
+import 'package:money_tracker/core/widgets/app_bar.dart';
+import 'package:money_tracker/core/widgets/app_navigationbar.dart';
+import 'package:money_tracker/features/account/data/user_information_data.dart';
+import 'package:money_tracker/features/account/view/account_view.dart';
+import 'package:money_tracker/features/drawer/view/main_drawer.dart';
+import 'package:money_tracker/features/home/view/home_view.dart';
+import 'package:money_tracker/features/transactions/view/transactions_view.dart';
 
 class MainView extends ConsumerStatefulWidget {
   const MainView({super.key});

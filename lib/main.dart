@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import 'package:z_money/core/theme/dark_color_scheme.dart';
-import 'package:z_money/core/theme/light_color_scheme.dart';
-import 'package:z_money/core/theme/theme_provider.dart';
-import 'package:z_money/main_view.dart';
+import 'package:money_tracker/core/theme/dark_color_scheme.dart';
+import 'package:money_tracker/core/theme/light_color_scheme.dart';
+import 'package:money_tracker/core/theme/theme_provider.dart';
+import 'package:money_tracker/main_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,14 +1,12 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:z_money/core/utils/date_formatter.dart';
-import 'package:z_money/features/home/data/money_data.dart';
-import 'package:z_money/features/transactions/data/transactions_data.dart';
-import 'package:z_money/features/transactions/data/transactions_label.dart';
+import 'package:money_tracker/core/utils/date_formatter.dart';
+import 'package:money_tracker/features/home/data/money_data.dart';
+import 'package:money_tracker/features/transactions/data/transactions_data.dart';
 
 TransactionsData withdrawFunction({
   required String newAmount,
   required String description,
   required bool isAdd,
-  required TransactionLabel? label,
   required DateTime date,
   required WidgetRef ref,
 }) {
@@ -21,7 +19,6 @@ TransactionsData withdrawFunction({
     amount: double.parse(newAmount.replaceAll(',', '')),
     description: description,
     isAdd: isAdd,
-    label: label,
     date: mainFormatter().format(date),
   );
 }

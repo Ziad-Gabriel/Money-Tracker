@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
-import 'package:z_money/features/home/widgets/buttons/cancel_button.dart';
-import 'package:z_money/features/home/widgets/buttons/choose_label.dart';
-import 'package:z_money/features/home/widgets/buttons/done_button/done_button.dart';
-import 'package:z_money/features/home/widgets/buttons/choose_date.dart';
-import 'package:z_money/features/home/widgets/text_fields/amount_text_field.dart';
-import 'package:z_money/features/home/widgets/text_fields/description_text_field.dart';
-import 'package:z_money/features/transactions/data/transactions_label.dart';
+import 'package:money_tracker/features/home/widgets/buttons/cancel_button.dart';
+import 'package:money_tracker/features/home/widgets/buttons/choose_date.dart';
+import 'package:money_tracker/features/home/widgets/buttons/done_button/done_button.dart';
+import 'package:money_tracker/features/home/widgets/text_fields/amount_text_field.dart';
+import 'package:money_tracker/features/home/widgets/text_fields/description_text_field.dart';
 
 class AddAndWithdrawBottomSheet extends ConsumerStatefulWidget {
   final bool isAdd;
@@ -24,7 +22,6 @@ class _AddAndWithdrawBottomSheetState
   final amountcontroller = TextEditingController();
   final descriptioncontroller = TextEditingController();
   DateTime date = DateTime.now(); // Default to current date
-  final TransactionLabel? selectedLabel = null;
 
   @override
   void dispose() {
@@ -56,7 +53,6 @@ class _AddAndWithdrawBottomSheetState
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                ChooseLabel(),
                 ChooseDate(
                   selectedDate: date,
                   onDateSelected: (selectedDate) {
@@ -77,7 +73,6 @@ class _AddAndWithdrawBottomSheetState
                   amount: amountcontroller,
                   description: descriptioncontroller,
                   date: date,
-                  label: selectedLabel,
                 ),
               ],
             ),

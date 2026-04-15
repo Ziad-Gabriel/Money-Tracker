@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:z_money/features/home/widgets/alert_dialog/alert_dialog.dart';
+
+import 'package:money_tracker/features/home/widgets/alert_dialog/alert_dialog.dart';
 
 /// When the user enters invalid description
 Future showInvalidDescripeDialog(BuildContext context) {

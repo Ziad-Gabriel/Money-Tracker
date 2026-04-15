@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:z_money/features/account/widgets/buttons/edit_profile_button.dart';
-import 'package:z_money/features/account/widgets/top_container/profile_image.dart';
-import 'package:z_money/features/account/widgets/top_container/user_information.dart';
+import 'package:money_tracker/features/account/widgets/buttons/edit_profile_button.dart';
+import 'package:money_tracker/features/account/widgets/top_container/profile_image.dart';
+import 'package:money_tracker/features/account/widgets/top_container/user_information.dart';
 
 class TopContainer extends StatelessWidget {
   const TopContainer({super.key});

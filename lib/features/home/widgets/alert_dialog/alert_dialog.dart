@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:z_money/core/constants/app_text_styles/main_text_style.dart';
 
 Widget showAlertDialog(BuildContext context, String message) {
   return AlertDialog(
@@ -8,7 +7,7 @@ Widget showAlertDialog(BuildContext context, String message) {
       'Invalid Input',
       style: TextStyle(color: Theme.of(context).colorScheme.onSecondary),
     ),
-    content: Text(message, style: mainText(context)),
+    content: Text(message),
     actions: [
       ElevatedButton(
         onPressed: () => Navigator.pop(context),
@@ -16,7 +15,7 @@ Widget showAlertDialog(BuildContext context, String message) {
           backgroundColor: Theme.of(context).colorScheme.primaryContainer,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
-        child: Text('OK', style: mainText(context)),
+        child: Text('OK'),
       ),
     ],
   );

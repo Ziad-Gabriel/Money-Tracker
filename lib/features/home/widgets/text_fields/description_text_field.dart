@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:z_money/core/constants/app_text_styles/main_text_style.dart';
 
 /// Typing transaction description
 class DescriptionTextField extends StatefulWidget {
@@ -32,7 +31,7 @@ class _DescriptionTextFieldState extends State<DescriptionTextField> {
       style: TextStyle(color: Theme.of(context).colorScheme.onPrimary),
       decoration: InputDecoration(
         labelText: "Enter description",
-        labelStyle: mainText(context),
+        // labelStyle:,
         suffixIcon: widget.controller.text.isEmpty
             ? Container(width: 0)
             : IconButton(

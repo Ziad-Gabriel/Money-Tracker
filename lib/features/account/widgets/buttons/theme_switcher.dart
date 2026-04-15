@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:z_money/core/constants/app_text_styles/main_text_style.dart';
-import 'package:z_money/core/theme/theme_provider.dart';
+import 'package:money_tracker/core/theme/theme_provider.dart';
 
 class ThemeSwitcher extends ConsumerStatefulWidget {
   const ThemeSwitcher({super.key});
@@ -32,7 +31,7 @@ class _ThemeSwitcherState extends ConsumerState<ThemeSwitcher> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('Dark Mode', style: mainText(context)),
+            Text('Dark Mode'),
             Switch(
               value: isDark,
               onChanged: (value) {

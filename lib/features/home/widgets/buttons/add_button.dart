@@ -1,8 +1,8 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
-import 'package:z_money/core/constants/app_bottom_sheet.dart';
-import 'package:z_money/core/constants/app_sized.dart';
-import 'package:z_money/features/home/widgets/bottom_sheets/container_bottom_sheet.dart';
+import 'package:money_tracker/core/constants/app_bottom_sheet.dart';
+import 'package:money_tracker/core/constants/app_sized.dart';
+import 'package:money_tracker/features/home/widgets/bottom_sheets/container_bottom_sheet.dart';
 
 class AddMoneyButton extends StatelessWidget {
   const AddMoneyButton({super.key});

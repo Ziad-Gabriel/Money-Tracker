@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
-import 'package:z_money/core/widgets/app_bar.dart';
-import 'package:z_money/features/account/data/user_information_data.dart';
-import 'package:z_money/features/settings/edit_profile/widget/alert_dialog/alert_dialog.dart';
-import 'package:z_money/features/settings/edit_profile/widget/informations/the_edit_profile_setting.dart';
+import 'package:money_tracker/core/widgets/app_bar.dart';
+import 'package:money_tracker/features/account/data/user_information_data.dart';
+import 'package:money_tracker/features/settings/widget/alert_dialog/alert_dialog.dart';
+import 'package:money_tracker/features/settings/widget/informations/the_edit_profile_setting.dart';
 
 class EditProfileSettingsView extends ConsumerWidget {
   const EditProfileSettingsView({super.key});
