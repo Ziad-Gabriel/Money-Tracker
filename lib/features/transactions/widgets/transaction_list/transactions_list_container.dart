@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:money_tracker/features/transactions/widgets/transaction_list/transactions_list_builder.dart';
 
 class TransactionsListContainerView extends StatelessWidget {
@@ -13,10 +14,19 @@ class TransactionsListContainerView extends StatelessWidget {
         children: [
           Row(
             children: [
-              SizedBox(width: 40, child: Center(child: Text('label'))),
-              Expanded(child: Center(child: Text('date'))),
-              Expanded(child: Center(child: Text('description'))),
-              Expanded(child: Center(child: Text('amount'))),
+              SizedBox(width: 40),
+              Expanded(
+                child: Center(
+                  child: Text(
+                    'date',
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                ),
+              ),
+              Expanded(child: Center(child: Text('description',
+                    style: Theme.of(context).textTheme.bodyLarge,))),
+              Expanded(child: Center(child: Text('amount',
+                    style: Theme.of(context).textTheme.bodyLarge,))),
               SizedBox(width: 40),
             ],
           ),

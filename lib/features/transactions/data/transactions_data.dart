@@ -25,21 +25,21 @@ class TransactionDataNotifier extends StateNotifier<List<TransactionsData>> {
     : super([
         TransactionsData(
           amount: 1000,
-          description: "The day we talk",
+          description: "transaction 1",
           date: "2026-01-09",
 
           isAdd: true,
         ),
         TransactionsData(
           amount: 50,
-          description: "Reem",
+          description: "transaction 2",
           date: "2007-10-31",
 
           isAdd: false,
         ),
         TransactionsData(
           amount: 200,
-          description: "Ziad",
+          description: "transaction 3",
           date: "2006-05-04",
 
           isAdd: false,

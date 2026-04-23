@@ -8,7 +8,7 @@ double buttonSize(BuildContext context) {
 
 /// Money counter widget's height based on screen height
 double moneyCounterHeight(BuildContext context) {
-  double height = MediaQuery.of(context).size.height * 0.10;
+  double height = MediaQuery.of(context).size.height * 0.125;
   return height;
 }
 
