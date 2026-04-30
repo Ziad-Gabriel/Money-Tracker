@@ -12,7 +12,6 @@ class TransactionsView extends StatelessWidget {
       padding: EdgeInsets.only(left: 8, right: 8, bottom: 16),
       child: Column(
         children: [
-          Divider(),
           Expanded(child: TransactionsListContainerView()),
           Divider(),
           Gap(MediaQuery.of(context).size.height * 0.15),

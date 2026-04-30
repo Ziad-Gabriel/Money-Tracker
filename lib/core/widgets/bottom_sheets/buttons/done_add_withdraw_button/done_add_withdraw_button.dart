@@ -74,10 +74,11 @@ class DoneButton extends ConsumerWidget {
         }
       },
       style: ElevatedButton.styleFrom(
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        elevation: 4,
+        backgroundColor: Theme.of(context).colorScheme.secondary,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
-      child: Text("Done"),
+      child: Text("Done", style: Theme.of(context).textTheme.bodyMedium),
     );
   }
 }

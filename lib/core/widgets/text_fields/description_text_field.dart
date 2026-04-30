@@ -28,7 +28,7 @@ class _DescriptionTextFieldState extends State<DescriptionTextField> {
       keyboardType: TextInputType.text,
       controller: widget.controller,
       textInputAction: TextInputAction.done,
-      style: TextStyle(color: Theme.of(context).colorScheme.onPrimary),
+      style: Theme.of(context).textTheme.bodySmall,
       decoration: InputDecoration(
         labelText: "Enter description",
         // labelStyle:,

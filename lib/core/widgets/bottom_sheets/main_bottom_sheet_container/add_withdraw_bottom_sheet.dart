@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 import 'package:money_tracker/core/widgets/bottom_sheets/buttons/cancel_button.dart';
-import 'package:money_tracker/core/widgets/choose_date/choose_date.dart';
+import 'package:money_tracker/core/widgets/choose_date/transaction_date/choose_transaction_date.dart';
 import 'package:money_tracker/core/widgets/bottom_sheets/buttons/done_add_withdraw_button/done_add_withdraw_button.dart';
 import 'package:money_tracker/core/widgets/text_fields/amount_text_field.dart';
 import 'package:money_tracker/core/widgets/text_fields/description_text_field.dart';
@@ -17,8 +17,7 @@ class AddAndWithdrawBottomSheet extends StatefulWidget {
       _AddAndWithdrawBottomSheetState();
 }
 
-class _AddAndWithdrawBottomSheetState
-    extends State<AddAndWithdrawBottomSheet> {
+class _AddAndWithdrawBottomSheetState extends State<AddAndWithdrawBottomSheet> {
   final amountcontroller = TextEditingController();
   final descriptioncontroller = TextEditingController();
   DateTime date = DateTime.now(); // Default to current date
@@ -53,7 +52,7 @@ class _AddAndWithdrawBottomSheetState
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                ChooseDate(
+                ChooseTransactionDate(
                   selectedDate: date,
                   onDateSelected: (selectedDate) {
                     setState(() {

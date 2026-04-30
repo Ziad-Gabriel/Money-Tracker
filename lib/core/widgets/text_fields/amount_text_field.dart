@@ -34,7 +34,7 @@ class _AmountTextFieldState extends State<AmountTextField> {
         AmountTextFieldFormatter(),
       ],
       controller: widget.controller,
-      style: TextStyle(color: Theme.of(context).colorScheme.onPrimary),
+      style: Theme.of(context).textTheme.bodySmall,
       decoration: InputDecoration(
         labelText: "Enter amount",
         // labelStyle: ,

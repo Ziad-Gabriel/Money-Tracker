@@ -4,7 +4,6 @@ import 'package:money_tracker/core/widgets/app_bars/app_bar.dart';
 
 import 'package:money_tracker/core/widgets/main_floating_button.dart';
 import 'package:money_tracker/core/widgets/app_bars/app_navigationbar.dart';
-import 'package:money_tracker/features/debt_receivables/view/debts_receivables_view.dart';
 import 'package:money_tracker/features/home/view/home_view.dart';
 import 'package:money_tracker/core/widgets/money_counter/money_counter.dart';
 import 'package:money_tracker/features/transactions/view/transactions_view.dart';
@@ -26,14 +25,10 @@ class _MainViewState extends ConsumerState<MainView> {
     super.initState();
   }
 
-  int currentIndex = 1; // Default to HomeView index
+  int currentIndex = 0; // Default to HomeView index
 
   // list of main pages to navigate through
-  final List<Widget> pages = [
-    const TransactionsView(),
-    const HomeView(),
-    const DebtsReceivablesView(),
-  ];
+  final List<Widget> pages = [const HomeView(), const TransactionsView()];
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +37,11 @@ class _MainViewState extends ConsumerState<MainView> {
         appBar: mainAppBar(context),
         body: Column(
           children: [
-            MoneyCounter(currentPageIndex: currentIndex,),
+            MoneyCounter(currentPageIndex: currentIndex),
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0, right: 8),
+              child: Divider(),
+            ),
             Expanded(
               child: PageView(
                 controller: controller,
@@ -58,7 +57,7 @@ class _MainViewState extends ConsumerState<MainView> {
             ),
           ],
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: MainFloatingButton(),
         extendBody: true,
         bottomNavigationBar: MainNavigationBar(

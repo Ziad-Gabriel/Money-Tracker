@@ -23,11 +23,22 @@ class TransactionsListContainerView extends StatelessWidget {
                   ),
                 ),
               ),
-              Expanded(child: Center(child: Text('description',
-                    style: Theme.of(context).textTheme.bodyLarge,))),
-              Expanded(child: Center(child: Text('amount',
-                    style: Theme.of(context).textTheme.bodyLarge,))),
-              SizedBox(width: 40),
+              Expanded(
+                child: Center(
+                  child: Text(
+                    'description',
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Center(
+                  child: Text(
+                    'amount',
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                ),
+              ),
             ],
           ),
           Expanded(child: TransactionsList()),

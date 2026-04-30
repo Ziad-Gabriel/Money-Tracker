@@ -50,13 +50,6 @@ class ListItem extends StatelessWidget {
           ),
         ),
         Expanded(child: ListItemText(text: amount)),
-        SizedBox(
-          width: 40,
-          child: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.info_outline_rounded),
-          ),
-        ),
       ],
     );
   }

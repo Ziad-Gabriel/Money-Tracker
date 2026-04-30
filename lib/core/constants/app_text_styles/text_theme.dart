@@ -20,13 +20,29 @@ class AppTextStyles {
         letterSpacing: 0.5,
         // color: Theme.of(context).colorScheme.onPrimary,
       ),
+      bodyMedium: appTextStyle.copyWith(
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
+        wordSpacing: 1.5,
+        letterSpacing: 0.5,
+        // color: Theme.of(context).colorScheme.onPrimary,
+      ),
+      bodySmall: appTextStyle.copyWith(
+        fontSize: 12,
+        fontWeight: FontWeight.w500,
+        wordSpacing: 1.5,
+        letterSpacing: 0.5,
+        // color: Theme.of(context).colorScheme.onPrimary,
+      ),
     );
   }
 
   static TextTheme get darkTextTheme {
     return TextTheme(
       titleLarge: lightTextTheme.titleLarge,
-      bodyLarge: lightTextTheme.bodyLarge
-      );
+      bodyLarge: lightTextTheme.bodyLarge,
+      bodyMedium: lightTextTheme.bodyMedium,
+      bodySmall: lightTextTheme.bodySmall,
+    );
   }
 }

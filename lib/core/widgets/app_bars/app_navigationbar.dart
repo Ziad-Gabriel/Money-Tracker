@@ -21,16 +21,6 @@ class MainNavigationBar extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(2.0),
           child: Icon(
-            currentIndex == 0
-                ? Icons.monetization_on_rounded
-                : Icons.monetization_on_outlined,
-            size: 28,
-            color: Theme.of(context).colorScheme.onPrimary,
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(2.0),
-          child: Icon(
             currentIndex == 1 ? Icons.home_rounded : Icons.home_outlined,
             size: 28,
             color: Theme.of(context).colorScheme.onPrimary,
@@ -39,9 +29,9 @@ class MainNavigationBar extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(2.0),
           child: Icon(
-            currentIndex == 2
-                ? Icons.account_balance_wallet_rounded
-                : Icons.account_balance_wallet_outlined,
+            currentIndex == 0
+                ? Icons.monetization_on_rounded
+                : Icons.monetization_on_outlined,
             size: 28,
             color: Theme.of(context).colorScheme.onPrimary,
           ),

@@ -20,14 +20,14 @@ class _MoneyCounterState extends ConsumerState<MoneyCounter> {
       children: [
         AnimatedContainer(
           duration: Duration(milliseconds: 300),
-          height: widget.currentPageIndex == 1 ? 16 : 0,
+          height: widget.currentPageIndex == 0 ? 16 : 0,
         ),
         Padding(
           padding: const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
           child: AnimatedContainer(
-            duration: Duration(milliseconds: 100),
-            width: widget.currentPageIndex == 1 ? 350 : 280,
-            height: widget.currentPageIndex == 1 ? 110 : 80,
+            duration: Duration(milliseconds: 300),
+            width: widget.currentPageIndex == 0 ? 350 : 280,
+            height: widget.currentPageIndex == 0 ? 110 : 80,
             padding: const EdgeInsets.all(16.0),
             decoration: BoxDecoration(
               boxShadow: [
@@ -47,7 +47,7 @@ class _MoneyCounterState extends ConsumerState<MoneyCounter> {
               ),
               borderRadius: BorderRadius.vertical(
                 bottom: const Radius.circular(10),
-                top: widget.currentPageIndex == 1
+                top: widget.currentPageIndex == 0
                     ? Radius.circular(10)
                     : Radius.circular(0),
               ),
@@ -56,7 +56,7 @@ class _MoneyCounterState extends ConsumerState<MoneyCounter> {
               child: Text(
                 formatMoney(amount),
                 style: GoogleFonts.viga(
-                  fontSize: widget.currentPageIndex == 1 ? 26 : 22,
+                  fontSize: widget.currentPageIndex == 0 ? 26 : 22,
                   color: Colors.white,
                 ),
               ),

@@ -9,9 +9,6 @@ class HomeView extends StatelessWidget {
       padding: EdgeInsets.only(left: 16, right: 16),
       child: Column(
         children: [
-          // MoneyCounter(),
-          // Gap(16),
-          Divider(),
         ],
       ),
     );
