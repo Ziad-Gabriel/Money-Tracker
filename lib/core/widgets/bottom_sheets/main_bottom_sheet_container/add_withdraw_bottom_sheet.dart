@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 import 'package:money_tracker/core/widgets/bottom_sheets/buttons/cancel_button.dart';
 import 'package:money_tracker/core/widgets/choose_date/transaction_date/choose_transaction_date.dart';
@@ -18,14 +17,14 @@ class AddAndWithdrawBottomSheet extends StatefulWidget {
 }
 
 class _AddAndWithdrawBottomSheetState extends State<AddAndWithdrawBottomSheet> {
-  final amountcontroller = TextEditingController();
-  final descriptioncontroller = TextEditingController();
+  final amountController = TextEditingController();
+  final descriptionController = TextEditingController();
   DateTime date = DateTime.now(); // Default to current date
 
   @override
   void dispose() {
-    amountcontroller.dispose();
-    descriptioncontroller.dispose();
+    amountController.dispose();
+    descriptionController.dispose();
     super.dispose();
   }
 
@@ -45,10 +44,10 @@ class _AddAndWithdrawBottomSheetState extends State<AddAndWithdrawBottomSheet> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            AmountTextField(controller: amountcontroller),
-            Gap(MediaQuery.of(context).size.height * 0.02),
-            DescriptionTextField(controller: descriptioncontroller),
-            Gap(MediaQuery.of(context).size.height * 0.02),
+            AmountTextField(controller: amountController),
+            SizedBox(height:MediaQuery.of(context).size.height * 0.02),
+            DescriptionTextField(controller: descriptionController),
+            SizedBox(height:MediaQuery.of(context).size.height * 0.02),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -62,15 +61,15 @@ class _AddAndWithdrawBottomSheetState extends State<AddAndWithdrawBottomSheet> {
                 ),
               ],
             ),
-            Gap(MediaQuery.of(context).size.height * 0.02),
+            SizedBox(height:MediaQuery.of(context).size.height * 0.02),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 const CancelButton(),
                 DoneButton(
                   isAdd: widget.isAdd,
-                  amount: amountcontroller,
-                  description: descriptioncontroller,
+                  amount: amountController,
+                  description: descriptionController,
                   date: date,
                 ),
               ],

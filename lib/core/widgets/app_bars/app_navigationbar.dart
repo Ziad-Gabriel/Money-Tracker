@@ -1,4 +1,3 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 /// A custom bottom navigation bar for the Zmoney app.
@@ -14,35 +13,31 @@ class MainNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CurvedNavigationBar(
+    return Container(
       color: Theme.of(context).colorScheme.primary,
-      backgroundColor: Colors.transparent,
-      items: [
-        Padding(
-          padding: const EdgeInsets.all(2.0),
-          child: Icon(
-            currentIndex == 1 ? Icons.home_rounded : Icons.home_outlined,
-            size: 28,
-            color: Theme.of(context).colorScheme.onPrimary,
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(2.0),
-          child: Icon(
-            currentIndex == 0
-                ? Icons.monetization_on_rounded
-                : Icons.monetization_on_outlined,
-            size: 28,
-            color: Theme.of(context).colorScheme.onPrimary,
-          ),
-        ),
-      ],
-      animationDuration: const Duration(milliseconds: 250),
-      animationCurve: Curves.easeInOut,
       height: 60,
-      index: currentIndex,
-      buttonBackgroundColor: Theme.of(context).colorScheme.secondary,
-      onTap: onTap,
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(2.0),
+            child: Icon(
+              currentIndex == 1 ? Icons.home_rounded : Icons.home_outlined,
+              size: 28,
+              color: Theme.of(context).colorScheme.onPrimary,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(2.0),
+            child: Icon(
+              currentIndex == 0
+                  ? Icons.monetization_on_rounded
+                  : Icons.monetization_on_outlined,
+              size: 28,
+              color: Theme.of(context).colorScheme.onPrimary,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

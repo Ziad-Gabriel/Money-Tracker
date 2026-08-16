@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppTextStyles {
-  static final TextStyle appTextStyle = GoogleFonts.viga();
+  static final TextStyle appTextStyle = TextStyle();
 
   static TextTheme get lightTextTheme {
     return TextTheme(

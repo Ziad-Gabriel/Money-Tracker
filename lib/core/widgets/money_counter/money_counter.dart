@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:money_tracker/core/utils/app_format_money/money_counter_formatter.dart';
 import 'package:money_tracker/features/home/data/money_data.dart';
 
@@ -55,7 +54,7 @@ class _MoneyCounterState extends ConsumerState<MoneyCounter> {
             child: Center(
               child: Text(
                 formatMoney(amount),
-                style: GoogleFonts.viga(
+                style: TextStyle(
                   fontSize: widget.currentPageIndex == 0 ? 26 : 22,
                   color: Colors.white,
                 ),
